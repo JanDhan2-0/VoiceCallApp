@@ -1,10 +1,10 @@
 # Age/Gender/Area
 # Financial/Health.
 
+import os
 from flask import Flask,request
 from twilio.twiml.voice_response import VoiceResponse,Gather
 from twilio.rest import Client
-
 
 app = Flask(__name__)
 
@@ -20,12 +20,12 @@ def makeCall(phoneNo):
     toPhoneNo = '+91'+phoneNo
     try:
         call = client.calls.create(
-                                url='http://69a8f1a37706.ngrok.io/answer',
+                                url='https://jandhan2voice.herokuapp.com/answer',
                                 to=toPhoneNo,
                                 from_='+12054489824'
                             )
                             
-        print(call.sid)
+        # print(call.sid)
         return "Success"
     except:
         return "Failure"
@@ -54,7 +54,7 @@ def gatherScheme():
     resp = VoiceResponse()
 
     if 'Digits' in request.values:
-        print(request.values)
+        # print(request.values)
         choice = request.values['Digits']
 
         if choice == '1':
@@ -112,7 +112,7 @@ def gatherSchemeFinal(schemeChoice,statusChoice):
     if 'Digits' in request.values:
         resp.say("आपके चयन के लिए शुक्रिया.")
         age = request.values['Digits']
-        print(schemeChoice,age,statusChoice)
+        # print(schemeChoice,age,statusChoice)
         age = int(age)
         schemeChoice = int(schemeChoice)
         statusChoice = int(statusChoice)
@@ -230,4 +230,5 @@ def gatherSchemeFinal(schemeChoice,statusChoice):
     return str(resp)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
