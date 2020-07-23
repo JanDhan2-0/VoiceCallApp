@@ -1,0 +1,19 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Deploy
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.0.0
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "jandhan2voice"
+          heroku_email: "jandhan2sih@gmail.com"
