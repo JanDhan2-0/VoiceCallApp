@@ -35,7 +35,7 @@ def makeCall(phoneNo):
 def answer_call():
     resp = VoiceResponse()
 
-    resp.say("जन धन दर्शन ऑनलाइन ग्राहक हेल्पलाइन में आपका स्वागत है", voice='Polly.Aditi',language="hi-IN")
+    resp.say("जन धन दर्शन ऑनलाइन ग्राहक हेल्पलाइन में आपका स्वागत है", voice='Polly.Aditi',language="kn-IN")
 
     gather = Gather(num_digits=1, action='/gatherScheme')
 
