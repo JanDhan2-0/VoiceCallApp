@@ -11,19 +11,19 @@ app = Flask(__name__)
 url1 = 'http://jandhan2.herokuapp.com/account/sendMsg'
 # Make the english better for these strings so that hindi too comes better.
 en = {
-    'message0': 'Welcome to Jan Dhan  Customer Helpline',
+    'message0': 'Welcome to Jan Dhan Customer Helpline',
     'message1':'Please enter your pincode.',
-    'message2':'Press one to know ATM near you. Press two to know Banks near you. Press three to know Post Offices near you. Press four to know Bank Mitras near you. Press five to know about various financial schemes',
-    'message3': 'Press one to know about Financial schemes. Press 2 to know about Health schemes.',
+    'message2':'Press one to know an ATM near you. Press two to know Banks near you. Press three to know Post Offices near you. Press four to know Bank Mitras near you. Press five to know about various schemes',
+    'message3': 'Press one to know about Financial schemes. Press two to know about Health schemes.',
     'message4': 'Thank you for choosing financial schemes.',
     'message5': 'Thank you for choosing health schemes',
-    'message6': 'If you are from rural india and your gender is male, press 1',
-    'message7': 'If you are from rural india and your gender is female press 2',
-    'message8': 'If you are from urban india and you gender is male press 3',
-    'message9': 'If you are from urban india and your gender is female press 4',
-    'message10': 'Sorry, I did not understand the choice.',
-    'message11': 'Thank you for your selection. ',
-    'message12': 'How old are you ?',
+    'message6': 'If you are from rural india and your gender is male, press one',
+    'message7': 'If you are from rural india and your gender is female press two',
+    'message8': 'If you are from urban india and you gender is male press three',
+    'message9': 'If you are from urban india and your gender is female press four',
+    'message10': 'Sorry, I did not understand your choice.',
+    'message11': 'Thank you for your selection.',
+    'message12': 'How old are you?',
     'message13': 'Thank you for telling us your age.',
     'message19': 'Annapurna Yojna',
     'message20': 'Central welfare scheme',
@@ -31,7 +31,7 @@ en = {
     'message22': 'Prime Minister Jeevan Jyoti Insurance Scheme',
     'message14': 'Please tell your PINCODE',
     'message15': 'Thank you for telling the PINCODE',
-    'message16': 'Prime Minister Jan Dhan Yojana.',
+    'message16': 'Pradhan Mantri Jan Dhan Yojana.',
     'message17':'National secondary education campaign',
     'message18': 'Atal Pension Yojna.',
     'message23': 'Indira Gandhi National Old Age Pension Scheme',
@@ -49,10 +49,10 @@ en = {
     'message33': 'Thank you for choosing Post Office',
     'message34': 'Thank you for choosing Bank Mitras',
     'message35': 'Thank you for choosing Scheme information',
-    'message40': 'These three schemes might be benefical for you.',
-    'message41': 'Thank you for contacting us. We hope to serve you in future',
-    'message42': 'Give us a minute. We are fetching nearest ones for you.',
-    'message43': 'Here are the ones nearest to you.'
+    'message40': 'These three schemes will be benefical for you.',
+    'message41': 'Thank you for contacting us. We hope to serve you in future!',
+    'message42': 'Give us a minute. We are fetching the nearest services for you.',
+    'message43': 'Here are the services nearest to you.'
 }
 
 #To be changed with hindi strings.
