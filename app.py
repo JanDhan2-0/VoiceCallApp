@@ -6,7 +6,6 @@ from flask import Flask,request
 from twilio.twiml.voice_response import VoiceResponse,Gather
 from twilio.rest import Client
 import requests
-import boto3
 
 app = Flask(__name__)
 url1 = 'http://jandhan2.herokuapp.com/account/sendMsg'
